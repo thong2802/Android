@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/itembutton"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imagehinh"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp">
+    </ImageView>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="100dp">
+             <TextView
+                 android:id="@+id/tenquocgia"
+                 android:text="Ten Quoc Gia"
+                 android:textSize="24sp"
+                 android:layout_weight="1"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp">
+             </TextView>
+            <TextView
+                android:id="@+id/So"
+                 android:text="so"
+                 android:textSize="14sp"
+                 android:layout_weight="1"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp">
+             </TextView>
+    </LinearLayout>
+
+</LinearLayout>
