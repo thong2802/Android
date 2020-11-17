@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="21dp"
+        android:left="32dp"
+        android:right="32dp"
+        android:top="37dp">
+        <rotate android:fromDegrees="45">
+            <shape>
+                <solid android:color="#A83060" />
+                <size
+                    android:width="100dp"
+                    android:height="100dp" />
+            </shape>
+        </rotate>
+    </item>
+    <item
+        android:bottom="400dp">
+        <bitmap android:src="@drawable/logo1"
+            android:gravity="center"/>
+    </item>
+    <item android:left="700dp">
+        <bitmap android:src="@drawable/ios"
+            android:gravity="center"/>
+    </item>
+</layer-list>

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CountDownTimer countDownTimer = new CountDownTimer(10000,500) {
+                CountDownTimer countDownTimer = new CountDownTimer(10000,100) {
                     @Override
                     public void onTick(long millisUntilFinished) {
                         int current = progressBarxuli.getProgress();
