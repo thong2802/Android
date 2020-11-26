@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/open"
+        android:icon="@drawable/icon_open"
+        android:title="Open" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/icon_share"
+        android:title="Share">
+        <menu>
+            <item android:title="Facebook"
+                  android:id="@+id/facbook"/>
+            <item android:title="Instagram"
+                  android:id="@+id/instagram"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/icon_delete"
+        android:title="Delete" />
+
+    <item
+
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/icon_search"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/icon_settings"
+        android:title="Settings"
+        app:showAsAction="ifRoom" />
+</menu>

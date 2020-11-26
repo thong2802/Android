@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">bai60_app_toan_cau</string>
+    <string name="text_hoten">Input Name</string>
+    <string name="text_email">Input email</string>
+    <string name="text_sodienthoai">Input your phone</string>
+    <string name="text_xacnhan">Confirm</string>
+    <string name="text_tieude">Infomation form</string>
+    <string name="txt_chaoban">Hello</string>
+    <string name="txt_email" translatable="false">email</string>
+    <string name="txt_sodienthoai">Phone Number</string>
+</resources>

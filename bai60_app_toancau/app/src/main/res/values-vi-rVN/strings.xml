@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">bai60_app_toan_cau</string>
+    <string name="text_hoten">Họ Tên</string>
+    <string name="text_email">Email</string>
+    <string name="text_sodienthoai">Số Điện Thoại</string>
+    <string name="text_xacnhan">Xác Nhận</string>
+    <string name="text_tieude">Phiếu Thông Tin</string>
+    <string name="txt_chaoban">Xin chào</string>
+    <string name="txt_sodienthoai">Số Điện Thoại</string>
+</resources>
