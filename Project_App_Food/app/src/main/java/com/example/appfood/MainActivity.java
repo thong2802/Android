@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appfood.adapter.PopularAdapter;
-import com.example.appfood.adapter.RecommendedAdapter;
+import com.example.appfood.adapter.recommendedAdapter;
 import com.example.appfood.model.FoodData;
 import com.example.appfood.model.Popular;
 import com.example.appfood.model.Recommended;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     APIinterfface apIinterfface;
     RecyclerView popularRecycleView;
     PopularAdapter popularAdapter;
-    RecommendedAdapter recommendedAdapter;
+    recommendedAdapter recommendedAdapter;
     RecyclerView recommendedRecyclerView;
 
     @Override
@@ -62,16 +62,16 @@ public class MainActivity extends AppCompatActivity {
     private void getPopularData(List<Popular> popularList){
           popularRecycleView = findViewById(R.id.popular_recycler);
           popularAdapter = new PopularAdapter(this, popularList);
-          RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
+          RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, true);
           popularRecycleView.setLayoutManager(layoutManager);
           popularRecycleView.setAdapter(popularAdapter);
     }
     private void getRecommededrData(List<Recommended> recommendedList){
         recommendedRecyclerView = findViewById(R.id.recommended_recycler);
-        recommendedAdapter = new RecommendedAdapter(this, recommendedList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
-        popularRecycleView.setLayoutManager(layoutManager);
-        popularRecycleView.setAdapter(recommendedAdapter);
+        recommendedAdapter = new recommendedAdapter(this, recommendedList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, true);
+        recommendedRecyclerView.setLayoutManager(layoutManager);
+        recommendedRecyclerView.setAdapter(recommendedAdapter);
     }
 
 }

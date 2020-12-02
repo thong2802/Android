@@ -16,11 +16,11 @@ import com.example.appfood.model.Recommended;
 
 import java.util.List;
 
-public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.RecommendedHolder>{
+public class recommendedAdapter extends RecyclerView.Adapter<recommendedAdapter.RecommendedHolder>{
     private Context context;
     private List<Recommended> recommendedList;
 
-    public RecommendedAdapter(Context context, List<Recommended> recommendedList) {
+    public recommendedAdapter(Context context, List<Recommended> recommendedList) {
         this.context = context;
         this.recommendedList = recommendedList;
     }
@@ -34,12 +34,12 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull RecommendedHolder holder, int position) {
-        holder.recommmendedName.setText(recommendedList.get(position).getName());
         Glide.with(context).load(recommendedList.get(position).getImageUrl()).into(holder.recommendedImage);
+        holder.recommmendedName.setText(recommendedList.get(position).getName());
         holder.recommendedrating.setText(recommendedList.get(position).getRating());
         holder.recommendeddelivery.setText(recommendedList.get(position).getDeliveryTime());
         holder.recommendedCharges.setText(recommendedList.get(position).getDeliveryCharges());
-        holder.recommendedprice.setText(recommendedList.get(position).getPrice());
+        holder.recommendedprice.setText(recommendedList.get(position).getPrice() + " $");
 
     }
 
@@ -59,6 +59,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             recommendedrating = itemView.findViewById(R.id.recommended_rating);
             recommendeddelivery = itemView.findViewById(R.id.recommended_deliverytime);
             recommendedprice = itemView.findViewById(R.id.recommended_price);
+            recommendedCharges = itemView.findViewById(R.id.delivery_type);
         }
     }
 }
