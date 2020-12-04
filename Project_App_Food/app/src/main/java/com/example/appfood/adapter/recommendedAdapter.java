@@ -1,6 +1,7 @@
 package com.example.appfood.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.appfood.AppFoodDetails;
 import com.example.appfood.R;
 import com.example.appfood.model.Recommended;
 
@@ -40,6 +42,19 @@ public class recommendedAdapter extends RecyclerView.Adapter<recommendedAdapter.
         holder.recommendeddelivery.setText(recommendedList.get(position).getDeliveryTime());
         holder.recommendedCharges.setText(recommendedList.get(position).getDeliveryCharges());
         holder.recommendedprice.setText(recommendedList.get(position).getPrice() + " $");
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, AppFoodDetails.class);
+                i.putExtra("Name", recommendedList.get(position).getName());
+                i.putExtra("Price", recommendedList.get(position).getPrice());
+                i.putExtra("Rating", recommendedList.get(position).getRating());
+                i.putExtra("Image", recommendedList.get(position).getImageUrl());
+
+                context.startActivity(i);
+            }
+        });
 
     }
 

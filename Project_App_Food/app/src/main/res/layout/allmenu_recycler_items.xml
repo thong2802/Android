@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/recycler_bg2">
+
+    <ImageView
+        android:id="@+id/popular2_image"
+        android:layout_width="96dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/asiafood2" />
+
+    <TextView
+        android:id="@+id/popular2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/acme"
+        android:text="TextView"
+        android:textColor="#333"
+        app:layout_constraintStart_toEndOf="@+id/popular2_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/popular2_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/palanquin_dark"
+        android:text="TextView"
+        android:textColor="#333"
+        app:layout_constraintStart_toStartOf="@+id/popular2_name"
+        app:layout_constraintTop_toBottomOf="@+id/popular2_name" />
+
+    <ImageView
+        android:id="@+id/popular2_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/popular2_note"
+        app:layout_constraintTop_toBottomOf="@+id/popular2_note"
+        app:srcCompat="@drawable/ic_star_rate" />
+
+    <TextView
+        android:id="@+id/popular2_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="@font/palanquin_dark"
+        android:gravity="center"
+        android:text="3.9"
+        android:textColor="#333"
+        app:layout_constraintBottom_toBottomOf="@+id/popular2_star"
+        app:layout_constraintStart_toEndOf="@+id/popular2_star"
+        app:layout_constraintTop_toTopOf="@+id/popular2_star"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/popular2_deliverytime"
+        android:layout_width="53dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/deliverytime_custom"
+        android:fontFamily="@font/palanquin_dark"
+        android:gravity="center"
+        android:text=" 30 minute "
+        android:textColor="#fff"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/popular2_rating"
+        app:layout_constraintStart_toEndOf="@+id/popular2_rating"
+        app:layout_constraintTop_toTopOf="@+id/popular2_rating"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/popular2_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/palanquin_dark"
+        android:gravity="clip_horizontal"
+        android:text="100"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/popular2_type_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="16dp"
+        android:text="Free Delivery"
+        android:textSize="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/popular2_deliverytime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

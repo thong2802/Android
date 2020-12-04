@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appfood.adapter.PopularAdapter;
+import com.example.appfood.adapter.allMenuAdapter;
 import com.example.appfood.adapter.recommendedAdapter;
+import com.example.appfood.model.Allmenu;
 import com.example.appfood.model.FoodData;
 import com.example.appfood.model.Popular;
 import com.example.appfood.model.Recommended;
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     PopularAdapter popularAdapter;
     recommendedAdapter recommendedAdapter;
     RecyclerView recommendedRecyclerView;
+    allMenuAdapter allMenuAdapter;
+    RecyclerView allMenuRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
                 getPopularData(foodDataList.get(0).getPopular());
                 getRecommededrData(foodDataList.get(0).getRecommended());
+                getAllmenuData(foodDataList.get(0).getAllmenu());
 
                 // lets run it
                 // We have data  from server
@@ -72,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, true);
         recommendedRecyclerView.setLayoutManager(layoutManager);
         recommendedRecyclerView.setAdapter(recommendedAdapter);
+    }
+    private void getAllmenuData(List<Allmenu> allmenuList){
+        allMenuRecyclerView = findViewById(R.id.Allmenu_recycler);
+        allMenuAdapter = new allMenuAdapter(this, allmenuList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, true);
+        allMenuRecyclerView.setLayoutManager(layoutManager);
+        allMenuRecyclerView.setAdapter(allMenuAdapter);
     }
 
 }
